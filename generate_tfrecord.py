@@ -15,14 +15,12 @@ import os
 import io
 import pandas as pd
 import tensorflow as tf
-from absl import app
-from absl import flags
 
 from PIL import Image
 from object_detection.utils import dataset_util
 from collections import namedtuple, OrderedDict
 
-flags = app.flags
+flags = tf.compat.v1.flags
 flags.DEFINE_string('csv_input', '', 'Path to the CSV input')
 flags.DEFINE_string('output_path', '', 'Path to output TFRecord')
 flags.DEFINE_string('image_dir', '', 'Path to images')
@@ -99,4 +97,4 @@ def main(_):
 
 
 if __name__ == '__main__':
-    app.run(main)
+    tf.app.run()
