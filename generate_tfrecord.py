@@ -16,6 +16,7 @@ import io
 import pandas as pd
 %tensorflow_version 1.x
 import tensorflow as tf
+# FLAGS = tf.compat.v1.flags.FLAGS
 
 from PIL import Image
 from object_detection.utils import dataset_util
@@ -25,7 +26,7 @@ flags = tf.app.flags
 flags.DEFINE_string('csv_input', '', 'Path to the CSV input')
 flags.DEFINE_string('output_path', '', 'Path to output TFRecord')
 flags.DEFINE_string('image_dir', '', 'Path to images')
-FLAGS = flags.FLAGS
+FLAGS = tf.compat.v1.flags.FLAGS
 
 
 # TO-DO replace this with label map
