@@ -14,6 +14,7 @@ from __future__ import absolute_import
 import os
 import io
 import pandas as pd
+%tensorflow_version 1.x
 import tensorflow as tf
 
 from PIL import Image
